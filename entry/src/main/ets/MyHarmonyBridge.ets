@@ -36,7 +36,9 @@ export default class MyHarmonyBridge {
     });
 
     // 回调给Unity
-    globalThis.messageCallback(data);
+    if (globalThis.messageCallback != null) {
+      globalThis.messageCallback(data);
+    }
 
     return data;
   }
