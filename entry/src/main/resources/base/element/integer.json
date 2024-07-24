@@ -1,0 +1,12 @@
+{
+  "integer": [
+    {
+      "name": "ShowStaticSplashScreen",
+      "value": 0
+    },
+    {
+      "name": "StaticSplashScreenFit",
+      "value": 0
+    }
+  ]
+}
