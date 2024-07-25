@@ -1,6 +1,7 @@
 import { deviceInfo } from '@kit.BasicServicesKit';
 import hilog from '@ohos.hilog';
 import promptAction from '@ohos.promptAction';
+import ActionHandle from './utils/ActionHandle';
 
 export default class MyHarmonyBridge {
   private static NUMBER = 0x001;
@@ -17,7 +18,7 @@ export default class MyHarmonyBridge {
   // action事件
   public doAction(actionCode: number, actionData: string): string {
     hilog.info(MyHarmonyBridge.NUMBER, MyHarmonyBridge.TAG, "doaction > actionCode: " + actionCode + " actionData: " + actionData);
-    return "success actionCode: " + actionCode + " actionData: " + actionData;
+    return ActionHandle.action(actionCode, actionData);
   }
 
   // 获取数据
